@@ -5,15 +5,11 @@ import { AxiosError } from 'axios';
 import { axiosInstance } from '@/app/api/apiInstance.ts';
 import { Params } from 'react-router-dom';
 
-// interface ChaptersParams {
-//   params: Readonly<Params<string>>;
-// }
-
-export const useChaptersQuery = ({
-  params,
-}: {
+interface ChaptersParams {
   params: Readonly<Params<string>>;
-}) => {
+}
+
+export const useChaptersQuery = ({ params }: ChaptersParams) => {
   const { data: chapters, isLoading: chaptersIsLoading } = useQuery<
     AxiosResponse<ChaptersResponse>,
     AxiosError,
