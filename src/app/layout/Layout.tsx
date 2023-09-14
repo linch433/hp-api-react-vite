@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Header from '@/app/layout/Header.tsx';
 import { clsx } from 'clsx';
+import Footer from '@/app/layout/Footer.tsx';
 
 interface LayoutProps {
   children: ReactNode;
@@ -15,6 +16,7 @@ const Layout = ({ children }: LayoutProps) => (
   >
     <Header />
     <section className="min-h-[calc(100vh-9.2rem)] mx-auto">{children}</section>
+    <Footer />
   </div>
 );
 

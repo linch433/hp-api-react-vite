@@ -7,6 +7,7 @@ import CharactersPage from '@/pages/CharactersPage/CharactersPage.tsx';
 import MoviesPage from '@/pages/MoviesPage/MoviesPage.tsx';
 import PotionsPage from '@/pages/PotionsPage/PotionsPage.tsx';
 import SpellsPage from '@/pages/SpellsPage/SpellsPage.tsx';
+import BookDetailInfo from '@/pages/BookDetailInfo/BookDetailInfo.tsx';
 
 const routes = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const routes = createBrowserRouter([
       {
         path: 'books',
         element: <BooksPage />,
+      },
+      {
+        path: 'books/:id',
+        element: <BookDetailInfo />,
       },
       {
         path: 'characters',

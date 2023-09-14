@@ -3,13 +3,13 @@ interface Pagination {
   records: number;
 }
 
-interface Meta {
-  pagination: Pagination;
+export interface Meta {
+  pagination?: Pagination;
   copyright: string;
   generated_at: string;
 }
 
-interface Links {
+export interface Links {
   self: string;
   current: string;
 }
