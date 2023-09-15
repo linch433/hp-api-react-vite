@@ -1,5 +1,7 @@
 interface Pagination {
   current: number;
+  next?: number;
+  last?: number;
   records: number;
 }
 
@@ -14,7 +16,7 @@ export interface Links {
   current: string;
 }
 
-interface GlobalResponse<T> {
+export interface GlobalResponse<T> {
   data: T[];
   meta: Meta;
   links: Links;
